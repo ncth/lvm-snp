@@ -1,17 +1,15 @@
 #!/bin/bash
 
 #
-# Script that creates BTRFS snapshots, manually or from cron
+# Script that creates LVM snapshots, manually or from cron
 #
 # Usage:
-#          sudo btrfs-snp  <dir> (<tag>) (<limit>) (<seconds>) (<destdir>)
+#          sudo lvm-snp  <src> <vg> (<tag>) (<size>) (<limit>) (<seconds>)
 #
 # Copyright 2019 by Nico Thörner 
 # GPL licensed (see end of file) * Use at your own risk!
 #
-# Based on btrfs-snp by Ignacio Nunez Hernanz (https://github.com/nachoparker/btrfs-snp/blob/master/btrfs-snp)
-#
-# More at https://ownyourbits.com
+# Based on btrfs-snp by Ignacio Nunez Hernanz (https://github.com/nachoparker/btrfs-snp/blob/master/btrfs-snp
 #
 
 function lvm-snp()
