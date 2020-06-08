@@ -42,10 +42,17 @@ Hourly snapshot for one day, daily for one week, weekly for one month, and month
 ```
 cat > /etc/cron.hourly/$BIN <<EOF
   #!/bin/bash
-  /usr/local/sbin/$BIN data vg00 hourly 1  24 3600
-  /usr/local/sbin/$BIN data vg00 daily  3  7 86400
-  /usr/local/sbin/$BIN data vg00 weekly 7  4 604800
-  /usr/local/sbin/$BIN data bg00 monthly 15 12 2592000
+  /usr/local/sbin/lvm-snp data vg00 hourly 1  24 3600
+  /usr/local/sbin/lvm-snp data vg00 daily  3  7 86400
+  /usr/local/sbin/lvm-snp data vg00 weekly 7  4 604800
+  /usr/local/sbin/lvm-snp data bg00 monthly 15 12 2592000
   EOF
   chmod +x /etc/cron.hourly/$BIN"
+```
+
+### Installation
+
+```
+sudo wget https://raw.githubusercontent.com/ncth/lvm-snp/master/lvm-snp -O /usr/local/sbin/lvm-snp
+sudo chmod +x /usr/local/sbin/lvm-snp
 ```
