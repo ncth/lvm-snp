@@ -50,7 +50,7 @@ cat > /etc/cron.hourly/$BIN <<EOF
   chmod +x /etc/cron.hourly/$BIN"
 ```
 
-### Installation
+## Installation
 
 ```
 sudo wget https://raw.githubusercontent.com/ncth/lvm-snp/master/lvm-snp -O /usr/local/sbin/lvm-snp
