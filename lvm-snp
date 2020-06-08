@@ -6,10 +6,10 @@
 # Usage:
 #          sudo btrfs-snp  <dir> (<tag>) (<limit>) (<seconds>) (<destdir>)
 #
-# Copyleft 2017 by Nico Thörner 
+# Copyright 2019 by Nico Thörner 
 # GPL licensed (see end of file) * Use at your own risk!
 #
-# Based on btrfs-snp by Ignacio Nunez Hernanz <nacho _a_t_ ownyourbits _d_o_t_ com>
+# Based on btrfs-snp by Ignacio Nunez Hernanz (https://github.com/nachoparker/btrfs-snp/blob/master/btrfs-snp)
 #
 # More at https://ownyourbits.com
 #
