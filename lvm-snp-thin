@@ -1,15 +1,14 @@
 #!/bin/bash
-
-#
-# Script that creates LVM snapshots, manually or from cron
-#
-# Usage:
-#          sudo btrfs-snp  <dir> (<tag>) (<limit>) (<seconds>) (<destdir>)
-#
-# Copyright 2020 by Nico Thörner 
-# GPL licensed (see end of file) * Use at your own risk!
-#
-# Based on btrfs-snp by Ignacio Nunez Hernanz (https://github.com/nachoparker/btrfs-snp/blob/master/btrfs-snp)
+#       
+# Script that creates LVM snapshots, manually or from cron      
+#        
+# Usage:      
+#          sudo lvm-snp-thin  <src> <vg> (<tag>) (<limit>) (<seconds>)      
+#        
+# Copyright 2020 by Nico Thörner        
+# GPL licensed (see end of file) * Use at your own risk!       
+#      
+# Based on btrfs-snp by Ignacio Nunez Hernanz (https://github.com/nachoparker/btrfs-snp/blob/master/btrfs-snp      
 #
 
 function lvm-snp()
@@ -23,7 +22,7 @@ function lvm-snp()
 
   # usage
   [[ "$*" == "" ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]] && {
-    echo "Usage: $BIN <src> <vg> (<tag>) (<size>) (<limit>) (<seconds>)
+    echo "Usage: $BIN <src> <vg> (<tag>) (<limit>) (<seconds>)
 
   src     │ create snapshot of the logical volume <src>
   vg      | virtual group the src is in
