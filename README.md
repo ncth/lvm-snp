@@ -56,3 +56,15 @@ cat > /etc/cron.hourly/$BIN <<EOF
 sudo wget https://raw.githubusercontent.com/ncth/lvm-snp/master/lvm-snp -O /usr/local/sbin/lvm-snp
 sudo chmod +x /usr/local/sbin/lvm-snp
 ```
+## Thinly-provisioned volumes
+
+You can use the lvm-snp-thin script thinly-provisioned volumes. It works like lvm-snp, however there is no size attribute.
+
+```
+Usage: lvm-snp-thin <src> <vg> (<tag>) (<limit>) (<seconds>)
+  src     │ create snapshot of the logical volume <src>
+  vg      │ virtual group the src is in
+  tag     │ name the snapshot <tag>_<timestamp>
+  limit   │ keep <limit> snapshots with this tag. 0 to disable
+  seconds │ don't create snapshots before <seconds> have passed from last with this tag. 0 to disable
+```
